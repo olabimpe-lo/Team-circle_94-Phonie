@@ -18,6 +18,7 @@ const inputPhone = document.querySelector('#phone');
 // To hide Image
 theImg.classList.add('hidden');
 
+
 // the number prefix for each service provider stored in each array data. (i used arrays so we can loop through them)   
 const mtnData = ["0702", "0703", "0704", "0706", "0803", "0806", "0810", "0813", "0814", "0816", "0903", "0906"]
 const gloData = ["0805", "0807", "0705", "0815", "0811", "0905"]
@@ -30,24 +31,33 @@ checkBtn.addEventListener('click', function(e) {
   const numInput = inputPhone.value.slice(0, 4)
   // console.log(numInput)
 
+  // To get the length of our input, we store the value in a variable
+  const chckLength = inputPhone.value
+
   //the conditions to display each service provider image
   // the 'some' method is an array method that loops through  an array and executes the given command as long as at least one array meets the condition set
 
-  if (mtnData.some(cur => cur === numInput)) {
+  if (mtnData.some(cur => cur === numInput) && chckLength.length === 11) {
     theImg.classList.remove('hidden')
-    theImg.src = 'mtn.png'
+    theImg.src = 'image/mtn.png'
   }
-  if (gloData.some(cur => cur === numInput)) {
+  if (gloData.some(cur => cur === numInput) && chckLength.length === 11) {
     theImg.classList.remove('hidden')
-    theImg.src = 'glo.png'
+    theImg.src = 'image/glo.png'
   }
-  if (airtelData.some(cur => cur === numInput)) {
+  if (airtelData.some(cur => cur === numInput) && chckLength.length === 11) {
     theImg.classList.remove('hidden')
-    theImg.src = 'airtel.png'
+    theImg.src = 'image/glo.png'
   }
-  if (nineMobileData.some(cur => cur === numInput)) {
+  if (nineMobileData.some(cur => cur === numInput) && chckLength.length === 11) {
     theImg.classList.remove('hidden')
-    theImg.src = '9mobile.png'
+    theImg.src = 'image/9mobile.png'
+  }
+
+
+  // to display invalid if our input is not 11 digits
+  if (chckLength.length !== 11) {
+    alert('Invalid Number')
   }
 })
 

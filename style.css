@@ -4,17 +4,13 @@
     box-sizing: border-box;
     font-size: large;
 }
-/* .container{
 
-} */
 #div-table{
-    border: 2px solid red;
     width: 600px;
     height: 100vh;
     margin-left: auto;
     margin-right: auto;
     border-radius: 10px;
-    /* text-align: center; */
 }
 #table{
     border: 2px solid black;
@@ -37,9 +33,9 @@
     background-color: chocolate;
     color: white;
     font-weight: 700;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, 'Times New Roman', Times, 
+    serif;
 }
-
 .image-div{
     display: block;
     text-align: center;
@@ -51,7 +47,6 @@
     border-radius: 5px;
     z-index: 2;
 }
-/* To hide images */
 .hidden{
-    display: none;
-} 
+  display: none;
+}
