@@ -9,34 +9,36 @@
 
   <link rel="stylesheet" href="style.css">
 </head>
-
-<body>
-
   <body>
-    <form action="">
-      <div id="div-table">
-        <table id="table">
+       <h1>Get to know your network provider</h1>
+    <form action="">  
+      <div id ="div-table">
+        <table id ="table">
+           
           <div class="image-div"><img src="image/mtn.png" alt="" class="the-image"></div>
           <tr>
-            <td> <label for="name">First Name:</label></td>
-            <td><input type="name" placeholder="First name" id="name"></td>
+            <td> <label for="firstname">First Name:</label></td>
+            <td><input type="firstname" placeholder="First name" id="firstname"></td>
           </tr>
-
+          <br>
           <tr>
             <td> <label for="lastname">Last Name:</label></td>
             <td><input type="name" placeholder="Last name" id="lastname"></td>
           </tr>
-
+          <br>
           <tr>
             <td><label for="phone"> Phone Number:</label></td>
             <td><input type="number" placeholder="Phone number" id="phone"></td>
           </tr>
-          <div class="btn"><button class="the-btn">Check Number Service Provider</button></div>
+
         </table>
+        <br>
+         <div class="btn"><button class="the-btn">Check Number Service Provider</button>
+          <button onclick ="myButton()">Reload</button></div>
       </div>
     </form>
 
-    <!--     <script src="index.mjs"></script> -->
+   <!--     <script src="index.mjs"></script> -->
   </body>
 
 </html>
